@@ -1,10 +1,9 @@
 mod expressions;
 mod flow_control;
 mod formatting;
+mod functions;
 mod primitives;
 mod transforming;
 mod user_types;
 
-fn main() {
-    flow_control::while_let_flow_control();
-}
+fn main() {}
