@@ -346,32 +346,46 @@ pub fn income_function_parameter() {
     println!("100 + 1 = {}", count)
 }
 
-fn create_fn() -> impl Fn() {
-    let text = "Fn";
+fn simple_fn() -> impl Fn() {
+    let text = "Hello from Simple Fn";
 
-    move || println!("a: {}", text)
+    move || println!("{text}")
 }
 
-fn create_fnmut() -> impl FnMut() {
-    let text = "FnMut";
+fn increment_fn() -> impl FnMut() {
+    let mut count = 0i32;
 
-    move || println!("a: {}", text)
+    move || {
+        count += 1;
+        println!("Hello from Increment Fn, {count}")
+    }
 }
 
-fn create_fnonce() -> impl FnOnce() {
-    let text = "FnOnce";
+fn once_fn() -> impl FnOnce() {
+    let count = Box::new(1i32);
 
-    move || println!("a: {}", text)
+    move || {
+        std::mem::drop(count);
+        println!("Hello from Once Fn")
+    }
 }
 
 pub fn output_function_parameters() {
-    let fn_plain = create_fn();
-    let mut fn_mut = create_fnmut();
-    let fn_once = create_fnonce();
+    let s_fn = simple_fn();
+    let mut inc_fn = increment_fn();
+    let once_fn = once_fn();
 
-    fn_plain();
-    fn_mut();
-    fn_once();
+    s_fn();
+    s_fn();
+    s_fn();
+
+    inc_fn();
+    inc_fn();
+    inc_fn();
+
+    once_fn();
+    // try uncomment line below
+    // once_fn();
 }
 
 pub fn iterator_any() {

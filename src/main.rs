@@ -6,4 +6,6 @@ mod primitives;
 mod transforming;
 mod user_types;
 
-fn main() {}
+fn main() {
+    functions::output_function_parameters();
+}
