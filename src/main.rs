@@ -1,3 +1,4 @@
+mod attributes;
 mod expressions;
 mod flow_control;
 mod formatting;
@@ -8,7 +9,9 @@ mod primitives;
 mod transforming;
 mod user_types;
 
-fn main() {}
+fn main() {
+    attributes::cfg_attributes();
+}
 
 pub fn hierarchy() {
     inner::hello::hello();
