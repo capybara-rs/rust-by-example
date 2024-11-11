@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 #[cfg(target_os = "linux")]
 fn are_you_on_linux() {
     println!("Вы работаете на операционной системе linux")
