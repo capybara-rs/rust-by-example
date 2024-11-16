@@ -10,9 +10,7 @@ mod primitives;
 mod transforming;
 mod user_types;
 
-fn main() {
-    generics::trait_limits();
-}
+fn main() {}
 
 pub fn hierarchy() {
     inner::hello::hello();
