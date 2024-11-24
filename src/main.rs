@@ -5,6 +5,7 @@ mod formatting;
 mod functions;
 mod generics;
 mod inner;
+mod macros;
 mod modules;
 mod primitives;
 mod scope;
@@ -13,7 +14,7 @@ mod transforming;
 mod user_types;
 
 fn main() {
-    traits::trait_polymorphizm();
+    macros::hello_rust!();
 }
 
 pub fn hierarchy() {
