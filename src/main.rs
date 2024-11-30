@@ -1,4 +1,6 @@
 mod attributes;
+mod error;
+mod experiment;
 mod expressions;
 mod flow_control;
 mod formatting;
@@ -14,7 +16,7 @@ mod transforming;
 mod user_types;
 
 fn main() {
-    macros::hello_rust!();
+    error::iterate::partitioning();
 }
 
 pub fn hierarchy() {

@@ -16,6 +16,7 @@ macro_rules! hello_rust {
     };
 }
 
+#[allow(unused_imports)]
 pub use hello_rust;
 
 pub fn hello_world() {
