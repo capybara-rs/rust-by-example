@@ -1,4 +1,5 @@
 mod attributes;
+mod collections;
 mod error;
 mod experiment;
 mod expressions;
@@ -11,12 +12,13 @@ mod macros;
 mod modules;
 mod primitives;
 mod scope;
+mod std;
 mod traits;
 mod transforming;
 mod user_types;
 
 fn main() {
-    error::iterate::partitioning();
+    std::rc::example();
 }
 
 pub fn hierarchy() {

@@ -584,7 +584,7 @@ pub mod wrap_error {
 }
 
 pub mod iterate {
-    use std::{collections::BTreeMap, num::ParseIntError};
+    use std::num::ParseIntError;
 
     pub fn problem() {
         let strings = vec!["apple", "1", "12"];
