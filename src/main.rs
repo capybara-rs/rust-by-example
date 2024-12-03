@@ -10,6 +10,7 @@ mod generics;
 mod inner;
 mod macros;
 mod modules;
+mod os;
 mod primitives;
 mod scope;
 mod std;
@@ -18,7 +19,7 @@ mod transforming;
 mod user_types;
 
 fn main() {
-    std::rc::example();
+    os::thread::map_reduce_example();
 }
 
 pub fn hierarchy() {

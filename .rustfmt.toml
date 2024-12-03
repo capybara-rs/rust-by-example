@@ -1,1 +1,2 @@
 chain_width = 30
+enum_discrim_align_threshold = 1000000
