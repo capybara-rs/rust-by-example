@@ -19,7 +19,7 @@ mod transforming;
 mod user_types;
 
 fn main() {
-    os::thread::map_reduce_example();
+    os::ffi::example();
 }
 
 pub fn hierarchy() {
