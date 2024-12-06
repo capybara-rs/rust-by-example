@@ -14,6 +14,7 @@ mod os;
 mod primitives;
 mod scope;
 mod std;
+mod testing;
 mod traits;
 mod transforming;
 mod user_types;
